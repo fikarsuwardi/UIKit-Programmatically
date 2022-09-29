@@ -45,11 +45,12 @@ class TableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
      return myArray.count
  }
 
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-      cell.textLabel!.text = "\(myArray[indexPath.row])"
-      return cell
-  }
+ // Buat nentuin isi tiap rownya
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
+     cell.textLabel!.text = "\(myArray[indexPath.row])"
+     return cell
+ }
   
   
   
