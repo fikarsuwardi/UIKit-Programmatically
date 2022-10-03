@@ -23,6 +23,8 @@ class BasicButton: UIViewController {
     
     button.layer.cornerRadius = 53/2 // panjang atau lebar per 2
     
+    button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+    
     return button
   }()
   
@@ -38,6 +40,10 @@ class BasicButton: UIViewController {
     button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     
+  }
+  
+  @objc func buttonAction(_ sender:UIButton!) {
+    print("Button tapped")
   }
   
   
